@@ -1,0 +1,4 @@
+interface:
+  display_name: "ExamNova Builder"
+  short_description: "Maintain ExamNova product and architecture constraints."
+  default_prompt: "Use $examnova-builder to extend the ExamNova desktop agent while preserving its Windows-first single-agent product rules."

@@ -1,0 +1,39 @@
+# desktop
+apps/desktop/node_modules/
+apps/desktop/.next/
+apps/desktop/.npm-cache/
+apps/desktop/out/
+apps/desktop/release/
+desktop/node_modules/
+desktop/.next/
+
+# python
+apps/backend/.venv/
+apps/backend/venv/
+apps/backend/build/
+apps/backend-dist/
+apps/backend/*.spec
+*.egg-info/
+backend/.venv/
+backend/venv/
+apps/backend/data/
+backend/data/
+*.db
+*.jsonl
+*.err
+**/__pycache__/
+*.pyc
+
+# local env
+.env
+*.local
+.examnova-data/
+
+# logs
+*.log
+dist/
+release/
+
+# editor
+.vscode/
+.idea/

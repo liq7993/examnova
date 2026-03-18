@@ -1,0 +1,58 @@
+ExamNova 项目摘要
+=================
+
+定位
+----
+- 面向中国大学生的 Windows-first 桌面复习工作台
+- 不是泛聊天助手，而是考试前冲刺、短期强化记忆场景下的 AI 教师 / 复习助手
+
+当前产品主线
+------------
+- 学习：题目、讲解、解题、错题复盘、冲刺模式 / 常规模式下的时间提醒
+- 写作与复盘：随笔、反思、复盘记录、下一步行动
+
+Agent 架构
+----------
+- 单 Agent 路由
+- Skills 负责学习与写作两条能力
+- Services 负责 OCR、LLM、历史记录、错题本、学习状态、复习策略
+
+重要模块
+--------
+- apps/backend/app/routes/
+- apps/backend/app/services/
+- apps/backend/app/skills/
+- apps/desktop/app/components/
+- apps/desktop/electron/
+
+时间与复习机制
+--------------
+- 双遗忘机制：
+  - 冲刺模式：服务考试前、短时高频巩固
+  - 常规模式：服务跨天回顾
+- 同时区分：
+  - 真实间隔时间
+  - 专注学习时间
+
+运行数据位置
+------------
+- 不再写入仓库
+- 统一写入：%LOCALAPPDATA%\\ExamNova
+
+其中包括：
+- settings.json
+- examnova.db
+- 可选 JSONL 迁移文件
+
+打包路线
+--------
+- Electron
+- 后端入口：apps/backend/run_backend.py
+- 前端入口：apps/desktop/electron/
+- 一键打包脚本：scripts/package-electron.ps1
+
+MiniMax 接入
+------------
+- 说明文档：docs/MINIMAX.md
+- 中国区 Base URL：https://api.minimaxi.com/v1
+- 海外 Base URL：https://api.minimax.io/v1
